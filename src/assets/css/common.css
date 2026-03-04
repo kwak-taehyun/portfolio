@@ -1,0 +1,14 @@
+body {background:#000;}
+.loading {display:flex; justify-content:center; align-items:center; position:fixed; top:0; bottom:0; width:100%; background:rgba(0,0,0,0.3);}
+.loading p {font-size:1rem; color:#fff;}
+
+.flex_box {display:flex; align-items:center;}
+.blind {position: absolute; left: -9999px; top: 0; height: 0; font-size: 1px; line-height: 0; text-indent: -9999em; overflow: hidden;}
+
+.btn.type01 {color:#fff; padding:5px 15px; background:#7D23F4;}
+.btn.type02 {color:#111; font-size:0.750rem; line-height:1; padding:6px 10px; border:1px solid #eceef0; background:#f0f0f0;}
+
+.select_box,
+.search_box form {display:flex; align-items:center;}
+.select_box label,
+.search_box label {display:inline-block; font-size:0.875rem; line-height:1.5rem; color:#fff; padding:0 10px;}
