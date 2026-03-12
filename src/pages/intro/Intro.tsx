@@ -8,7 +8,6 @@ const Intro = () => {
       <div className="company_contents">
         <IntroContent />
         <IntroValue />
-        <IntroSkill />
       </div>
     </div>
   );

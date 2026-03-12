@@ -27,7 +27,7 @@ const GnbMenu = () => {
 
         <div className="company_info">
           <div className="wylie_story">
-            <h4>Kwak TH Portfolio</h4>
+            <h4>Kwak T.H Portfolio</h4>
             <ul className="wylie_link">
               <li><Link to="etc">Etc</Link></li>
               {/*<li><Link to="people">People</Link></li>*/}
