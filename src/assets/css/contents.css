@@ -1,5 +1,7 @@
 .sub_contents {padding:100px 0 150px;}
 .sub_contents .sub_title {font-weight:700; font-size:5rem; color:#fff; text-transform:uppercase; margin-bottom:80px;}
+.sub_title.desc_type {margin-bottom:20px;}
+.title_desc {font-size:1.25rem; color:#f0f0f0; margin-bottom:40px;}
 .bg_white .sub_contents .sub_title {color:#000;}
 
 /* CX */

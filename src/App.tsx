@@ -9,6 +9,7 @@ const Work = React.lazy(() => import("./pages/worklist/Work"));
 const Intro = React.lazy(() => import("./pages/intro/Intro"));
 const Career = React.lazy(() => import("./pages/career/Career"));
 const Skill = React.lazy(() => import("./pages/skill/Skill"));
+const Etc = React.lazy(() => import("./pages/etc/Etc"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="intro" element={<Intro />} />
             <Route path="career" element={<Career />} />
             <Route path="skill" element={<Skill />} />
+            <Route path="etc" element={<Etc />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -17,7 +17,7 @@ const MainMedia = (props: PropsType) => {
           <li><a className="btn_link" onClick={() => navigate('work')}>Work</a></li>
           <li><a className="btn_link" onClick={() => navigate('career')}>Career</a></li>
           <li><a className="btn_link" onClick={() => navigate('skill')}>Skill</a></li>
-          <li><a className="btn_link" onClick={() => navigate('company')}>Company</a></li>
+          <li><a className="btn_link" onClick={() => navigate('etc')}>Etc</a></li>
           <li><a className="btn_link" onClick={() => navigate('people')}>People</a></li>
           <li className="wylie_times"><a className="btn_link" onClick={() => navigate('times')}>Wylie Times</a></li>
         </ul>

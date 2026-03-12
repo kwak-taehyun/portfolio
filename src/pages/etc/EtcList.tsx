@@ -1,10 +1,10 @@
-import {BookData} from './Service';
+import {BookData} from './Etc';
 
 type PropsType = {
   items: BookData;
 }
 
-const ServiceList = (props: PropsType) => {
+const EtcList = (props: PropsType) => {
   const authers: string = props.items.authors.join("/");
   const price = props.items.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   const salePrice = props.items.sale_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -33,4 +33,4 @@ const ServiceList = (props: PropsType) => {
   );
 };
 
-export default ServiceList;
+export default EtcList;

@@ -27,10 +27,10 @@ const GnbMenu = () => {
 
         <div className="company_info">
           <div className="wylie_story">
-            <h4>wylie's Story</h4>
+            <h4>Kwak TH Portfolio</h4>
             <ul className="wylie_link">
-              <li><Link to="company">Company</Link></li>
-              <li><Link to="people">People</Link></li>
+              <li><Link to="etc">Etc</Link></li>
+              {/*<li><Link to="people">People</Link></li>*/}
             </ul>
           </div>
           <hr />

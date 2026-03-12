@@ -58,7 +58,6 @@ const Header = () => {
         </div>
 
         <div className="header_util">
-          {pathname === "company" || pathname === "times" || pathname === "times/" + id || pathname === "people" ? "" : <a onClick={() => navigate('/company')} className="inquiry">Company</a>}
           <div className={`${isOpenGnb ? "gnb_area open" : "gnb_area"}`}>
             <div className="gnb_box">
               <a className="btn_gnb" onClick={() => {setIsOpenGnb(!isOpenGnb)}}><span className="blind">전체메뉴</span></a>
