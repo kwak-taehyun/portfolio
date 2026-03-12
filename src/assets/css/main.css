@@ -1,4 +1,4 @@
-.main {height:100vh; background-color:#000; overflow-y:hidden;}
+.main {height:100vh; background-color:#26282c; overflow-y:hidden;}
 .main .main_contents {height:calc(100% - 152px);}
 .contents_area {position:relative; height:100%;}
 .main_slider {padding-left:380px; padding-bottom:59px; position:relative; overflow:hidden;}

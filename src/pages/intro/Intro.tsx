@@ -1,6 +1,5 @@
 import IntroContent from './IntroContent';
 import IntroValue from './IntroValue';
-import IntroSkill from './IntroSkill';
 
 const Intro = () => {
   return (

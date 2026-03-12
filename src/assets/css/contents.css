@@ -2,7 +2,7 @@
 .sub_contents .sub_title {font-weight:700; font-size:5rem; color:#fff; text-transform:uppercase; margin-bottom:80px;}
 .sub_title.desc_type {margin-bottom:20px;}
 .title_desc {font-size:1.25rem; color:#f0f0f0; margin-bottom:40px;}
-.bg_white .sub_contents .sub_title {color:#000;}
+.bg_white .sub_contents .sub_title {color:#26282c;}
 
 /* CX */
 .portpolio-list-cont {padding: 0 20px 50px;}
@@ -48,11 +48,11 @@
 
 .value_area,
 .skill_area {padding:200px 0; background:#fff;}
-.value_area .text_box dt {color:#000; margin-bottom:120px;}
+.value_area .text_box dt {color:#26282c; margin-bottom:120px;}
 .value_box {display:flex; flex-flow:row nowrap; justify-content:space-between; gap:80px;}
 .value {width:100%; position:relative;}
 .value_tit {position:absolute; top:0; left:0;}
-.value .tit {font-weight:700; font-size:1.375rem; line-height:1.75rem; color:#000; margin-bottom:8px;}
+.value .tit {font-weight:700; font-size:1.375rem; line-height:1.75rem; color:#26282c; margin-bottom:8px;}
 .value .eng {display:block; font-size:0.875rem; line-height:1.375rem; color:rgba(125, 35, 244, 1);}
 .value .text {font-weight:300; font-size:0.875rem; line-height:1.375rem; color:#888;}
 .value .img {width:100%; height:360px;}
@@ -70,7 +70,7 @@
 .solution_list li a:hover::after {content:'프로젝트 보기'; display:block; position:absolute; bottom:20px; left:20px; color:#fff; padding-right:20px; background:url('../images/common/arr_right_16x16.svg') right center no-repeat;}
 .solution_list dl {display:flex; flex-flow:row nowrap; align-items:center; justify-content:space-between;}
 .solution_area .solution_list dt,
-.knowhow_area .solution_list dt {width:384px; font-size:4rem; line-height:5.25rem; text-align:center; color:#000; margin-bottom:0; text-shadow: -1px 1px 0 #fff,1px 1px 0 #fff,1px -1px 0 #fff,-1px -1px 0 #fff;}
+.knowhow_area .solution_list dt {width:384px; font-size:4rem; line-height:5.25rem; text-align:center; color:#26282c; margin-bottom:0; text-shadow: -1px 1px 0 #fff,1px 1px 0 #fff,1px -1px 0 #fff,-1px -1px 0 #fff;}
 .solution_area .solution_list li a:hover dt,
 .knowhow_area .solution_list li a:hover dt {color:inherit; background: -webkit-linear-gradient(left,#87EAFE -20.2%,#9C86FF 47.53%,#EFB2FE 124.28%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:none;}
 .solution_list dd {width:800px; font-weight:300; font-size:1rem; line-height:1.625rem;}
@@ -92,7 +92,7 @@
 .history_info dt {display:flex; flex-flow:row nowrap; justify-content:space-between; align-items:center; padding-right:80px; position:relative;}
 .history_info dt::after {content:''; display:block; width:72px; height:72px; position:absolute; top:50%; right:0; margin-top:-36px; background:url('../images/contents/ico_arrow_white_72x72.svg') no-repeat; transform:rotate(180deg);}
 .awards_list li.active .history_info dt::after {transform:rotate(0deg);}
-.history_info dt .years {font-weight:bold; font-size:4rem; line-height:5.25rem; color:#000; text-shadow: -1px 1px 0 #fff,1px 1px 0 #fff,1px -1px 0 #fff,-1px -1px 0 #fff;}
+.history_info dt .years {font-weight:bold; font-size:4rem; line-height:5.25rem; color:#26282c; text-shadow: -1px 1px 0 #fff,1px 1px 0 #fff,1px -1px 0 #fff,-1px -1px 0 #fff;}
 .history_info dt .number {display:block; font-weight:bold; font-size:1.125rem; line-height:2.625rem; color:#7D23F4; border:1px solid #7D23F4; border-radius:24px; padding:0 20px;}
 .awards_list li .history_info dd {display:none;}
 .awards_list li.active .history_info dd {display:block;}
@@ -254,3 +254,14 @@
 .payment_list li .chk_box label {font-size:12px; line-height:18px; padding-left:0;}
 .payment_list li .chk_box label::before {width:18px; height:18px; background-size:18px;}
 .payment_list .slick-track {display:flex;}
+
+/* Skill  */
+.skill_list > li + li {margin-top:50px;}
+.skill_box {padding:30px; border-radius:20px; border:1px solid #26282c; box-sizing:border-box; background:#fff;}
+.skill_box dt {font-weight:700; font-size:2.5rem; padding:0 0 30px; margin-bottom:30px; border-bottom:1px solid #26282c;}
+.skill_box dt::after {content:''; display:inline-block; width:10px; height:10px; border-radius:50%; margin-left:5px; background-color:#f35626;}
+.skill_detail {display:flex; justify-content:flex-start; align-items:center; gap:10%}
+.skill_detail li {display:flex; flex-direction:column; align-items:center;}
+.skill_detail .skill_icon {display:block; width:120px; height:120px; padding:10px; margin-bottom:15px; border-radius:10px; box-sizing:border-box; background-color:#f0f0f0;}
+.skill_name {font-weight:700; font-size:1.25rem; color:#26282c; text-align:center;}
+.skill_icon img {width:100%; height:100%; object-fit:contain;}

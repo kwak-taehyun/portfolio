@@ -9,7 +9,7 @@ const Layout = () => {
   const pathname: string = location.pathname.substr(1);
 
   return (
-    <div className={`${pathname === "company" ? "sub_wrap no_bg" : pathname === "times" || pathname === "times/" + id ? "sub_wrap bg_white" : "sub_wrap"}`}>
+    <div className={`${pathname === "intro" ? "sub_wrap no_bg" : pathname === "skill" ? "sub_wrap bg_white" : "sub_wrap"}`}>
       <Header />
       <div className="container">
         <Outlet />

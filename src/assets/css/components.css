@@ -17,8 +17,8 @@
 .header .home .wylie_logo {position:absolute; top:30px; left:28px; z-index:100;}
 .header .home .logo {width:512px; height:206px;}
 .header .wylie_logo {position:static; display:flex; flex-flow:row nowrap; align-items:flex-end;}
-.header .home .wylie_logo .text {font-weight:600; font-size:64px;} 
-.header .home .wylie_logo .text strong {font-weight:600; font-size:80px;} 
+.header .home .wylie_logo .text {font-weight:600; font-size:48px;} 
+.header .home .wylie_logo .text strong {font-weight:600; font-size:62px;} 
 .header .home .wylie_logo strong {display:block;}
 .header .home .wylie_logo {flex-flow:column nowrap; align-items:flex-start;}
 .header .wylie_logo.open {top:34px; left:48px; z-index:101; display:flex; flex-flow:row nowrap; align-items:center;}
@@ -29,7 +29,7 @@
 .header .logo .text strong,
 .header .wylie_logo.open .text strong {font-weight:600; font-size:1.5rem;}
 .header .wylie_logo.open .text strong {display:inline-block;}
-.header .logo .text.dark {color:#000;}
+.header .logo .text.dark {color:#26282c;}
 .header .wylie_logo.open .logo_text {opacity:0;}
 .header .logo_text span,
 .header .wylie_logo.open .logo_text span {display:inline-block; font-weight:400; font-size:0.875rem; line-height:1.375rem; color:#fff; margin-left:5px;}
@@ -68,7 +68,7 @@
 .bg_white .header .gnb_area.open .btn_gnb::before {border:2px solid #fff;}
 .bg_white .header_nav .nav_list li a {color:#888;}
 .bg_white .header .inquiry,
-.bg_white .header_nav .nav_list li a.active {color:#000;}
+.bg_white .header_nav .nav_list li a.active {color:#26282c;}
 .bg_white .header.sticky .inquiry {color:#fff}
 .bg_white .header.sticky .header_nav .nav_list li a {color:rgba(255,255,255,0.5);}
 .bg_white .header.sticky .header_nav .nav_list li a:hover {color:rgba(255,255,255,1.0); transition:all 1.0s ease-out;}
