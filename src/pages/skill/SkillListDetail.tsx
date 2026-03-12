@@ -1,6 +1,10 @@
 import {SkillListType} from './Skill';
 
-const SkillListDetail = (props: SkillListType) => {
+type PropsType = {
+  tool: SkillListType;
+}
+
+const SkillListDetail = (props: PropsType) => {
   return (
     <>
       <li>

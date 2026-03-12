@@ -61,7 +61,7 @@ const Skill = () => {
         <div className="contents_wrap">
           <ul className="skill_list">
             {skillList.map((item, index) => {
-              return <SkillList key={index} index={index} items={item} />
+              return <SkillList key={index} items={item} index={index} />;
             })}
           </ul>
         </div>

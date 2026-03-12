@@ -1,11 +1,10 @@
 import {Outlet} from 'react-router';
-import {useLocation, useParams} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
 const Layout = () => {
   const location = useLocation();
-  const {id} = useParams<string>();
   const pathname: string = location.pathname.substr(1);
 
   return (
