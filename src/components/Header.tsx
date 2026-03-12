@@ -35,21 +35,23 @@ const Header = () => {
     <header className={`${stickyHeader ? "header sticky" : "header"}`}>
       <div className="inner">
         <div className="header_cont">
-          <div className={`${isOpenGnb ? "wylie_logo open" : "wylie_logo"}`}>
+          <div className={`${isOpenGnb ? "header_logo open" : "header_logo"}`}>
             <h1 className="logo">
               <a onClick={() => {
                 navigate('/');
-              }}><img src={`${isOpenGnb || stickyHeader ? "/images/common/wylie_logo.png" : pathname === "times" || pathname === "times/" + id ? "/images/common/wylie_logo_purple.png" : "/images/common/wylie_logo.png"}`} alt="Wylie logo" /></a>
+              }}>
+                <span className={`text ${isOpenGnb || stickyHeader ? "light" : pathname === "times" || pathname === "times/" + id ? "dark" : "light"}`}>Publisher. <strong>Kwak T.H.</strong></span>
+              </a>
             </h1>
           </div>
 
           {pathname === "company" || pathname === "times" || pathname === "times/" + id || pathname === "people" ? "" :
             <div className="header_nav">
               <ul className="nav_list">
-                <li><NavLink to="cx">cx</NavLink></li>
-                <li><NavLink to="platform">platform</NavLink></li>
-                <li><NavLink to="market">market</NavLink></li>
-                <li><NavLink to="service">service</NavLink></li>
+                <li><NavLink to="intro">intro</NavLink></li>
+                <li><NavLink to="work">work</NavLink></li>
+                <li><NavLink to="career">career</NavLink></li>
+                <li><NavLink to="skill">skill</NavLink></li>
               </ul>
             </div>
           }

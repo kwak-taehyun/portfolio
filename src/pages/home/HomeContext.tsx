@@ -9,10 +9,11 @@ export type SlideListType = {
 };
 
 export type HomeContextValueType = {
-  state: {slideList: Array<SlideListType>, isHomeValid: boolean, isOpenGnb: boolean,};
+  state: {slideList: Array<SlideListType>, isHomeValid: boolean, isOpenGnb: boolean, isPaused: boolean};
   change: {
     onChangeMode: (mode: boolean) => void;
     gnbClick: () => void;
+    onChangePause: (mode: boolean) => void;
   };
 }
 
@@ -24,13 +25,14 @@ const HomeContext = React.createContext<HomeContextValueType | null>(null);
 
 export const HomeProvider = (props: PropsType) => {
   const slideList: Array<SlideListType> = [
-    {id: 1, group: "MARKETING", company:"보솜이", project: "리브랜딩 프로젝트", thumbnail: "/images/main/main_visual06.png"},
-    {id: 2, group: "CX", company:"KB국민카드", project: "마이데이터 2.0 고도화", thumbnail: "/images/main/main_visual03.png"},
-    {id: 3, group: "PLATFORM", company:"SK렌터카", project: "UIUX 컨설팅", thumbnail: "/images/main/main_visual04.png"},
-    {id: 4, group: "MARKETING", company:"크래프트하인즈", project: "디지털 마케팅", thumbnail: "/images/main/main_visual05.png"},
+    {id: 1, group: "MARKETING", company:"보솜이", project: "리브랜딩 프로젝트", thumbnail: "images/main/main_visual06.png"},
+    {id: 2, group: "CX", company:"KB국민카드", project: "마이데이터 2.0 고도화", thumbnail: "images/main/main_visual03.png"},
+    {id: 3, group: "PLATFORM", company:"SK렌터카", project: "UIUX 컨설팅", thumbnail: "images/main/main_visual04.png"},
+    {id: 4, group: "MARKETING", company:"크래프트하인즈", project: "디지털 마케팅", thumbnail: "images/main/main_visual05.png"},
   ];
   const [isHomeValid, setIsHomeValid] = useState<boolean>(true);
   const [isOpenGnb, setIsOpenGnb] = useState<boolean>(false);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
 
   const onChangeMode = (mode: boolean) => {
     setIsHomeValid(mode);
@@ -40,9 +42,13 @@ export const HomeProvider = (props: PropsType) => {
     setIsOpenGnb(!isOpenGnb);
   };
 
+  const onChangePause = (mode: boolean) => {
+    setIsPaused(mode);
+  };
+
   const values: HomeContextValueType = {
-    state: {slideList, isHomeValid, isOpenGnb},
-    change: {onChangeMode, gnbClick},
+    state: {slideList, isHomeValid, isOpenGnb, isPaused},
+    change: {onChangeMode, gnbClick, onChangePause},
   }
 
   return (

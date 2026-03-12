@@ -15,7 +15,7 @@ const Home = () => {
       </HomeProvider>
       
       <footer className="main_footer">
-        <span className="copyright">ⓒ wylie. All rights reserved.</span>
+        <span className="copyright">ⓒ Kwak's. All rights reserved.</span>
         <span className="company_brief">
           <a download>COMPANY BRIEF</a>
         </span>

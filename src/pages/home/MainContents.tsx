@@ -13,6 +13,7 @@ export type CallbacksType = {
   slideNext: () => void,
   dotsOnClick: (index: number) => void,
   slideActiveChange: (index: number) => void;
+  slideModeChange: () => void;
 }
 
 const MainContents = () => {
@@ -24,12 +25,21 @@ const MainContents = () => {
   const slideNext = () => {slickRef.current.slickNext()};
   const dotsOnClick = (index: number) => {slickRef.current.slickGoTo(index)};
   const slideActiveChange = (index: number) => {setCurrentIndex(index)};
+  const slideModeChange = () => {
+    if(value?.state.isPaused) {
+      slickRef.current.slickPlay();
+      value?.change.onChangePause(!value?.state.isPaused);
+    }else{
+      slickRef.current.slickPause();
+      value?.change.onChangePause(!value?.state.isPaused);
+    }
+  }
 
   const changeSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
-  const callbacks: CallbacksType = {slidePrev, slideNext, dotsOnClick, slideActiveChange};
+  const callbacks: CallbacksType = {slidePrev, slideNext, dotsOnClick, slideActiveChange, slideModeChange};
   const states: StatesType = {currentIndex};
 
   const modeOnChange = () => {
@@ -42,7 +52,7 @@ const MainContents = () => {
       value?.change.onChangeMode(false);
       setCurrentIndex(0);
     }
-  };
+  };  
 
   return (
     <div className="contents_area" onWheel={onScrollFunction}>

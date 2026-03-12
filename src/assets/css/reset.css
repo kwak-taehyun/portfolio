@@ -40,6 +40,7 @@ img {
     border:none;
 }
 i, em, address {font-style:normal;}
+b, strong {font-weight: 700;}
 table {width:100%; border-collapse:separate; border-spacing:0;}
 input, select, textarea, button {font-family:'Pretendard'; font-size:0.875rem; line-height:1.5rem; border:none; outline:none; vertical-align:top;}
 input:not([type="checkbox"], [type="radio"]) {padding:5px 10px;}

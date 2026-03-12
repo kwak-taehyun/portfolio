@@ -10,7 +10,7 @@
 .portpolio-list-cont .list-box .list-img-wrap .brand-bg img {display:block; width:100%;}
 .portpolio-list-cont .list-box .list-img-wrap .brand-logo {position: absolute; top: 0; right: 0; left: 0; width: 100%;}
 .portpolio-list-cont .list-box .list-img-wrap .brand-object {position: absolute; bottom: 0; right: 0; left: 0;}
-.portpolio-list-cont .list-box .list-title {display: flex; padding: 16px 0;}
+.portpolio-list-cont .list-box .list-title {display: flex; padding: 16px; background-color:rgba(0,0,0,0.5);}
 .portpolio-list-cont .list-box .list-title .brand-name {font-size: 13px; line-height: 160%;}
 .portpolio-list-cont .list-box .list-title .project-name {margin-left: 8px; font-size: 13px; line-height: 160%;}
 .portpolio-list-cont.cx ul li .list-box .list-img-wrap {max-width: 904px;}
@@ -19,14 +19,13 @@
 .portpolio-list .heading-title .des-text {display: none;}
 .portpolio-list-cont .list-box .list-img-wrap .brand-bg {border-radius: 16px;}
 .portpolio-list-cont > ul > li~li {margin-top: 56px;}
-.portpolio-list-cont .list-box .list-title {padding: 16px 0 8px;}
 .portpolio-list-cont .list-box .list-title .brand-name,.portpolio-list-cont .list-box .list-title .project-name {font-size: 16px; line-height: 160%;}
 .portpolio-list-cont.cx ul li~li {margin-top: 128px;}
 .portpolio-list-cont.cx ul li .list-box {position: relative; display: flex;}
 .portpolio-list-cont.cx ul li .list-box .list-img-wrap .brand-bg:hover img {/*transition: all .2s linear; transform: scale(1.5)*/}
 .portpolio-list-cont.cx ul li .list-box .list-title {flex-direction: column; position: absolute; bottom: 48px; margin-top: 0; color:#fff;}
 .portpolio-list-cont.cx ul li .list-box .list-title .brand-name,
-.portpolio-list-cont.cx ul li .list-box .list-title .project-name {margin-left: 0; font-weight:500; font-size: 64px; line-height: 130%;}
+.portpolio-list-cont.cx ul li .list-box .list-title .project-name {margin-left: 0; font-weight:500; font-size:50px; line-height: 1.5;}
 .portpolio-list-cont.cx ul li:nth-child(odd) .list-box .list-img-wrap {margin-left: 312px;}
 .portpolio-list-cont.cx ul li:nth-child(odd) .list-box .list-title {padding-bottom: 0; left: 0; text-align: left;}
 .portpolio-list-cont.cx ul li:nth-child(even) .list-box {flex-direction: row-reverse;}
@@ -41,11 +40,12 @@
 .parsona_area .text_box.flex_box {justify-content:space-between;}
 .parsona_area .text_box dl {width:530px;}
 .company_wrap .text_box dt {font-weight:bold; font-size:2.5rem; line-height:3.75rem; color:#fff; margin-bottom:40px;}
-.company_wrap .text_box dd > span {display:block; line-height:1.625rem; color:rgba(255,255,255,0.7);}
+.company_wrap .text_box dd > p {display:block; line-height:1.625rem; color:rgba(255,255,255,0.7); word-break:keep-all;}
 .company_wrap .text_box dd + dd {margin-top:30px;}
 .parsona_area .vision_box {margin-top:227px;}
 
-.value_area {padding:200px 0; background:#fff;}
+.value_area,
+.skill_area {padding:200px 0; background:#fff;}
 .value_area .text_box dt {color:#000; margin-bottom:120px;}
 .value_box {display:flex; flex-flow:row nowrap; justify-content:space-between; gap:80px;}
 .value {width:100%; position:relative;}
@@ -82,9 +82,9 @@
 .knowhow_area .solution_list a:hover::after {display:none;}
 .knowhow_area dd strong {font-size:1.5rem; line-height:2.25rem; color:#fff;}
 
-.awards_area {padding:200px 0 280px; background:url('../images/contents/bg_company_awards.png') repeat-y; background-size:cover;}
-.company_contents .area_tit {font-weight:bold; font-size:2.5rem; line-height:3.75rem; color:#fff; margin-bottom:40px;}
-.awards_area .inner_tit {font-size:2rem; line-height:3rem; color:#fff; text-align:center; margin:200px 0 56px;}
+.awards_area {padding:100px 0 180px;}
+.area_tit {font-weight:bold; font-size:2.5rem; line-height:3.75rem; color:#fff; margin-bottom:40px;}
+.awards_area .inner_tit {font-size:2rem; line-height:3rem; color:#fff; text-align:center; margin:100px 0 56px;}
 .awards_list > li {margin-top:56px;}
 .awards_list > li:first-child {margin-top:0;}
 .history_info dt {display:flex; flex-flow:row nowrap; justify-content:space-between; align-items:center; padding-right:80px; position:relative;}
@@ -99,18 +99,18 @@
 .awards_area .list_table {display:table; width:100%; border-collapse:separate; table-layout:fixed;}
 .awards_area .list_table li {display:table-row;}
 .awards_area .list_table li:first-child span {border-top:none;}
-.awards_area .list_table li > span {display:table-cell; padding:32px 0; font-size:1.125rem; line-height:2rem; color:#fff;  border-top:1px solid rgba(255,255,255,0.1);}
-.awards_area .list_table li .awards {width: 20%; text-align:center;}
-.awards_area .awards span {display:block; position:relative; padding-left:60px;}
-.awards span::before {content:''; display:inline-block; width:40px; height:40px; position:absolute; top:50%; transform:translateY(-50%); left:10px;}
+.awards_area .list_table li > span {display:table-cell; padding:32px 0; font-size:1.125rem; line-height:2rem; color:#fff;  border-top:1px solid rgba(255,255,255,0.1); vertical-align:middle;}
+.awards_area .list_table li .awards {width: 18%; text-align:center;}
+.awards_area .awards span {display:block; position:relative;}
+/*.awards span::before {content:''; display:inline-block; width:40px; height:40px; position:absolute; top:50%; transform:translateY(-50%); left:10px;}
 .awards.ictaward span::before {background:url('../images/contents/ico_ict_award.png') no-repeat; background-size:40px;}
 .awards.sociali-award span::before {background:url('../images/contents/ico_social_award.png') no-repeat; background-size:40px;}
 .awards.appaward span::before {background:url('../images/contents/ico_app_award.png') no-repeat; background-size:40px;}
-.awards.webaward span::before {background:url('../images/contents/ico_web_award.png') no-repeat; background-size:40px;}
-.awards_area .list_table li .detail {width: 19%; padding:0 10px; text-align:center;}
+.awards.webaward span::before {background:url('../images/contents/ico_web_award.png') no-repeat; background-size:40px;}*/
+.awards_area .list_table li .detail {width: 16%; padding:0 10px; text-align:center;}
 .awards_area .list_table li .sector {width: 18%; font-size:0.875rem; color:#888; padding:0 10px; text-align:center;}
-.awards_area .list_table li .project {width: auto; text-align:center;}
-.awards_area .list_table li .link {width: 9%; text-align:center;}
+.awards_area .list_table li .project {width: auto; text-align:center; word-break:keep-all;}
+.awards_area .list_table li .link {width: 10%; text-align:center;}
 .awards_area .list_table li .link a {display:none; font-size:0.875rem; line-height:2rem; color:#888; vertical-align:top;}
 .awards_area .list_table li:hover .link a {display:inline-block;}
 

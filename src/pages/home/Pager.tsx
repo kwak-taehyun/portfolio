@@ -11,7 +11,7 @@ type PropsType = {
 const Pager = ({callbacks, states}: PropsType) => {
   const value = useContext(HomeContext);
   const dotsItems = value?.state.slideList;
-
+  
   return (
     <div className="slide_control">
       <a className="prev_arrow arrow" onClick={() => {
@@ -27,6 +27,15 @@ const Pager = ({callbacks, states}: PropsType) => {
         {dotsItems?.map((item, index) => {
           return <PagerDots key={index} callbacks={callbacks} states={states} item={item} index={index} />
         })}
+        {!value?.state.isHomeValid ? 
+          <span className={`pager_control ${!value?.state.isPaused ? "pause" : "play"}`}>
+            <a className="btn_control" onClick={() => {
+              callbacks.slideModeChange();
+            }}>{`${!value?.state.isPaused ? "pause" : "play"}`}</a>
+          </span>
+          : 
+          <></>
+        }
       </div>
       <a className="next_arrow arrow" onClick={() => {
         if(value?.state.isHomeValid) {

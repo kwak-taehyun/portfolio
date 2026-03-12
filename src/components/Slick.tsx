@@ -13,7 +13,7 @@ interface SliderProps {
 };
 
 // 부모 컴포넌트에서 자식 컴포넌트의 DOM 요소에 접근할 때는 forwardRef를 사용해서 접근해야 한다. (props, ref) 형태로 ref 전달
-const Slick = ({children, className, autoplay = false, speed = 300, loop = true, changeSlide}: SliderProps, ref: any) => {
+const Slick = ({children, className, autoplay = true, speed = 300, loop = true, changeSlide}: SliderProps, ref: any) => {
   const settings = useMemo<Settings>(() => ({
     dots: false,
     infinite: loop,

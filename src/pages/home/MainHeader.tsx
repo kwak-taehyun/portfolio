@@ -18,13 +18,10 @@ const MainHeader = () => {
           <h1 className="logo">
             <a onClick={() => {
               navigate('/');
-            }}><img src="/images/common/wylie_logo.png" alt="Wylie logo" /></a>
+            }}>
+              <span className="text">Publisher <strong>Kwak T.H.</strong></span>
+            </a>
           </h1>
-          <div className="logo_text">
-            <span>Total</span>
-            <span>Communication</span>
-            <span>Group</span>
-          </div>
         </div>
 
         <div className="header_util">
