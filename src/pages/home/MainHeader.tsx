@@ -19,7 +19,7 @@ const MainHeader = () => {
             <a onClick={() => {
               navigate('/');
             }}>
-              <span className="text">Publisher <strong>Kwak T.H</strong></span>
+              <span className="text">Publisher <strong>Kwak tae hyun</strong></span>
             </a>
           </h1>
         </div>

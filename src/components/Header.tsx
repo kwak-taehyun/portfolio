@@ -40,7 +40,7 @@ const Header = () => {
               <a onClick={() => {
                 navigate('/');
               }}>
-                <span className={`text ${isOpenGnb || stickyHeader ? "light" : pathname === "skill" ? "dark" : "light"}`}>Publisher. <strong>Kwak T.H</strong></span>
+                <span className={`text ${isOpenGnb || stickyHeader ? "light" : pathname === "skill" ? "dark" : "light"}`}>Publisher. <strong>Kwak Tae Hyun</strong></span>
               </a>
             </h1>
           </div>

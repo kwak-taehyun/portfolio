@@ -7,10 +7,10 @@ type NavListType = {
 
 const GnbMenu = () => {
   const navList: Array<NavListType> = [
-    {id: 1, name: "Intro"},
-    {id: 2, name: "Career"},
-    {id: 3, name: "Work"},
-    {id: 4, name: "Skill"},
+    {id: 1, name: "intro"},
+    {id: 2, name: "career"},
+    {id: 3, name: "work"},
+    {id: 4, name: "skill"},
   ];
 
   return (
@@ -27,7 +27,7 @@ const GnbMenu = () => {
 
         <div className="company_info">
           <div className="wylie_story">
-            <h4>Kwak T.H Portfolio</h4>
+            <h4>Kwak tae hyun Portfolio</h4>
             <ul className="wylie_link">
               <li><Link to="etc">Etc</Link></li>
               {/*<li><Link to="people">People</Link></li>*/}
