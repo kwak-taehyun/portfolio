@@ -1,5 +1,4 @@
 import {useNavigate} from 'react-router-dom';
-import ReactPlayer from 'react-player';
 import TextType from '../../components/effect/TextType';
 import Prism from '../../components/effect/Prism';
 

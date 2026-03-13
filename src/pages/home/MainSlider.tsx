@@ -1,7 +1,5 @@
 import {useState, useEffect, useContext, forwardRef} from 'react';
-import {useNavigate} from 'react-router-dom';
 import Slick from '../../components/Slick';
-// import TextTransition, {presets} from 'react-text-transition';
 import BlurText from '../../components/effect/BlurText';
 import HomeContext from './HomeContext';
 
@@ -12,7 +10,6 @@ type PropsType = {
 
 const MainSlider = (props: PropsType, ref: any) => {
   const value = useContext(HomeContext);
-  const navigate = useNavigate();
   const [textIndex, setTextIndex] = useState<number>(1);
   const sliderItems = value?.state.slideList;
 

@@ -2,9 +2,8 @@ import React, {useState} from 'react';
 
 export type SlideListType = {
   id: number;
-  group: string;  
-  company: string;
-  project: string;
+  title: string;  
+  desc: string;
   thumbnail: string;
 };
 
