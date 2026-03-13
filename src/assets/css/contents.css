@@ -56,9 +56,9 @@
 .value .eng {display:block; font-size:0.875rem; line-height:1.375rem; color:rgba(125, 35, 244, 1);}
 .value .text {font-weight:300; font-size:0.875rem; line-height:1.375rem; color:#888;}
 .value .img {width:100%; height:360px;}
-.value.respect .img {background:url('../images/contents/img_value_respect.png') no-repeat; background-size:auto 360px;}
-.value.creative .img {background:url('../images/contents/img_value_creative.png') no-repeat; background-size:auto 360px;}
-.value.challenge .img {background:url('../images/contents/img_value_challenge.png') no-repeat; background-size:auto 360px;}
+.value.respect .img {background:#fff url('../images/contents/img_value_respect.png') right bottom no-repeat; background-size:auto 280px;}
+.value.creative .img {background:#fff url('../images/contents/img_value_creative.png') right bottom no-repeat; background-size:auto 280px;}
+.value.challenge .img {background:#fff url('../images/contents/img_value_challenge.png') right bottom no-repeat; background-size:auto 280px;}
 
 .solution_area,
 .knowhow_area {padding:200px 0; background:#000;}
