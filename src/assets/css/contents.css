@@ -116,6 +116,10 @@
 .awards_area .list_table li .link a {display:none; font-size:0.875rem; line-height:2rem; color:#888; vertical-align:top;}
 .awards_area .list_table li:hover .link a {display:inline-block;}
 
+.scroll-reveal {margin: 20px 0;}
+.scroll-reveal-text {font-size: clamp(1.6rem, 4vw, 3rem); line-height: 1.5; font-weight: 600;}
+.word {display: inline-block;}
+
 /* Service  */
 .search_area {display:flex; flex-flow:row nowrap; justify-content:flex-end; padding:20px 0 50px;}
 .search_area .select_box {margin-left:20px;}
