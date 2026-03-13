@@ -39,6 +39,9 @@
 .parsona_area > div {width:1216px; margin:0 auto;}
 .parsona_area .slogan {margin-bottom:31.0417vw;}
 .parsona_area .slogan .text {font-weight:bold; font-size:5rem; line-height:6.5rem; color:#fff;}
+.scroll-reveal {margin: 20px 0;}
+.scroll-reveal-text {font-size: clamp(1.6rem, 4vw, 3rem); line-height: 1.5; font-weight: 600;}
+.word {display: inline-block;}
 .parsona_area .text_box.flex_box {justify-content:space-between;}
 .parsona_area .text_box dl {width:530px;}
 .company_wrap .text_box dt {font-weight:bold; font-size:2.5rem; line-height:3.75rem; color:#fff; margin-bottom:40px;}
@@ -115,10 +118,6 @@
 .awards_area .list_table li .link {width: 10%; text-align:center;}
 .awards_area .list_table li .link a {display:none; font-size:0.875rem; line-height:2rem; color:#888; vertical-align:top;}
 .awards_area .list_table li:hover .link a {display:inline-block;}
-
-.scroll-reveal {margin: 20px 0;}
-.scroll-reveal-text {font-size: clamp(1.6rem, 4vw, 3rem); line-height: 1.5; font-weight: 600;}
-.word {display: inline-block;}
 
 /* Service  */
 .search_area {display:flex; flex-flow:row nowrap; justify-content:flex-end; padding:20px 0 50px;}

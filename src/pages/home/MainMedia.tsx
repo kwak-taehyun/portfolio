@@ -1,6 +1,6 @@
-import {useNavigate} from 'react-router-dom';
 import TextType from '../../components/effect/TextType';
 import Prism from '../../components/effect/Prism';
+import MainAside from './MainAside';
 
 type PropsType = {
   values: boolean;
@@ -8,8 +8,6 @@ type PropsType = {
 };
 
 const MainMedia = (props: PropsType) => {
-  const navigate = useNavigate();
-
   const handleAnimationComplete = () => {
     setTimeout(() => {
       props.modeOnChange();
@@ -18,17 +16,7 @@ const MainMedia = (props: PropsType) => {
 
   return (
     <div className="main_slider">
-      <div className="wylie_contents">
-        <ul className="main_link">
-          <li><a className="btn_link" onClick={() => navigate('intro')}>Intro</a></li>
-          <li><a className="btn_link" onClick={() => navigate('work')}>Work</a></li>
-          <li><a className="btn_link" onClick={() => navigate('career')}>Career</a></li>
-          <li><a className="btn_link" onClick={() => navigate('skill')}>Skill</a></li>
-          <li><a className="btn_link" onClick={() => navigate('etc')}>Etc</a></li>
-          <li><a className="btn_link" onClick={() => navigate('people')}>People</a></li>
-          <li className="wylie_times"><a className="btn_link" onClick={() => navigate('times')}>Wylie Times</a></li>
-        </ul>
-      </div>
+      <MainAside />
       <div className="my_ci">
         <div className="visual_area">
           <div className="visual_text">

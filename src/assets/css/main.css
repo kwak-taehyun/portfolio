@@ -21,8 +21,8 @@
 .main .scroll_arrow.on .text::after {width:155px;}
 .main .scroll_arrow.on .text i {display:inline-block;}
 
-.wylie_contents {display:flex; width:380px; flex-flow:row nowrap; align-items:end; position:absolute; left:0; top:0; bottom:0; padding-bottom:59px; padding-left:48px;}
-.wylie_contents .main_link {width:260px;}
+.aside_nav {display:flex; width:380px; flex-flow:row nowrap; align-items:end; position:absolute; left:0; top:0; bottom:0; padding-bottom:59px; padding-left:48px;}
+.aside_nav .main_link {width:260px;}
 .main_link li {display:inline-block; margin-left:10px;}
 .main_link li:first-child {margin-left:0;}
 .main_link li::before {content:''; display:inline-block; width:1px; height:8px; border-radius:2px; background:rgba(255, 255,255, 0.3); margin-right:10px; vertical-align:middle;}

@@ -2,6 +2,7 @@ import {useState, useEffect, useContext, forwardRef} from 'react';
 import Slick from '../../components/Slick';
 import BlurText from '../../components/effect/BlurText';
 import HomeContext from './HomeContext';
+import MainAside from './MainAside';
 
 type PropsType = {
   currentIndex: number;
@@ -20,6 +21,7 @@ const MainSlider = (props: PropsType, ref: any) => {
 
   return (
     <div className="main_slider">
+      <MainAside />
       <div className="slide_area">
         <div className="slide_text">
           <div className="text_area">
