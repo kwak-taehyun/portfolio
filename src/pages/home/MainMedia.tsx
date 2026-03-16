@@ -27,13 +27,10 @@ const MainMedia = (props: PropsType) => {
               showCursor
               cursorCharacter="_"
               deletingSpeed={50}
-              //variableSpeedEnabled={false}
-              //variableSpeedMin={60}
-              //variableSpeedMax={120}
               cursorBlinkDuration={0.5}
               className="text"
               loop={false}
-              onAnimationComplete={handleAnimationComplete}
+              //onAnimationComplete={handleAnimationComplete}
             />
             {/*<BlurText
               text="Welcome to taehyun's portfolio!"

@@ -23,6 +23,7 @@ interface TextTypeProps {
   startOnVisible?: boolean;
   reverseMode?: boolean;
   onAnimationComplete?: () => void;
+  multiLine?: boolean;
 }
 
 const TextType = ({
@@ -45,6 +46,7 @@ const TextType = ({
   startOnVisible = false,
   reverseMode = false,
   onAnimationComplete,
+  multiLine = false,
   ...props
 }: TextTypeProps & React.HTMLAttributes<HTMLElement>) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -52,6 +54,8 @@ const TextType = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(!startOnVisible);
+  const [elements, setElements] = useState(insertElement);
+  const [lineIndex, setLineIndex] = useState(1);
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -67,6 +71,17 @@ const TextType = ({
     if (textColors.length === 0) return 'inherit';
     return textColors[currentTextIndex % textColors.length];
   };
+
+  const insertElement = createElement(
+    'span',
+    {
+      className: 'text-type__content',
+      style: {
+        color: getCurrentTextColor() || 'inherit'
+      },
+    },
+    displayedText
+  );
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
@@ -152,10 +167,42 @@ const TextType = ({
       }
     };
 
+    const multiExecuteTypingAnimation = () => {
+      if(lineIndex <= textArray.length) {
+        if (currentCharIndex < processedText.length) {
+          timeout = setTimeout(
+            () => {
+              setDisplayedText(prev => prev + processedText[currentCharIndex]);
+              setCurrentCharIndex(prev => prev + 1);
+            },
+            variableSpeed ? getRandomSpeed() : typingSpeed
+          );          
+        }else{
+          timeout = setTimeout(() => {
+
+            setLineIndex(prev => prev + 1);
+            setCurrentCharIndex(0);
+            setCurrentTextIndex(prev => (prev + 1) % textArray.length);
+          }, pauseDuration);
+
+          if (onAnimationComplete) {
+            return onAnimationComplete();
+          }
+        }
+      }else{
+        setCurrentCharIndex(0);
+        setIsDeleting(false);
+      }
+    }
+
     if (currentCharIndex === 0 && !isDeleting && displayedText === '') {
-      timeout = setTimeout(executeTypingAnimation, initialDelay);
+      timeout = setTimeout(executeTypingAnimation, multiExecuteTypingAnimation, initialDelay);
     } else {
-      executeTypingAnimation();
+      if(!multiLine) {
+        executeTypingAnimation();
+      }else{
+        multiExecuteTypingAnimation();
+      }
     }
 
     return () => clearTimeout(timeout);
@@ -175,6 +222,7 @@ const TextType = ({
     variableSpeed,
     onSentenceComplete,
     onAnimationComplete,
+    lineIndex,
   ]);
 
   const shouldHideCursor =
@@ -187,9 +235,10 @@ const TextType = ({
       className: `text-type ${className}`,
       ...props
     },
-    <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }}>
-      {displayedText}
-    </span>,
+    // <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }}>
+    //   {displayedText}
+    // </span>,
+    elements,
     showCursor && (
       <span
         ref={cursorRef}
@@ -197,7 +246,7 @@ const TextType = ({
       >
         {cursorCharacter}
       </span>
-    )
+    ),
   );
 };
 

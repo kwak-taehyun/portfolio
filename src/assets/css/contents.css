@@ -1,5 +1,5 @@
 .sub_contents {padding:100px 0 150px;}
-.sub_contents .sub_title {font-weight:700; font-size:5rem; color:#fff; text-transform:uppercase; margin-bottom:80px;}
+.sub_contents .sub_title {font-weight:bold; font-size:5rem; color:#fff; text-transform:uppercase; margin-bottom:80px;}
 .sub_title.desc_type {margin-bottom:20px;}
 .title_desc {font-size:1.25rem; color:#f0f0f0; margin-bottom:40px;}
 .bg_white .sub_contents .sub_title {color:#26282c;}
@@ -37,15 +37,16 @@
 /* Company */
 .parsona_area {position:relative; padding:170px 0 200px; background:url('../images/contents/bg_company.png') no-repeat; background-size:100%; background-attachment:fixed;}
 .parsona_area > div {width:1216px; margin:0 auto;}
-.parsona_area .slogan {margin-bottom:31.0417vw;}
-.parsona_area .slogan .text {font-weight:bold; font-size:5rem; line-height:6.5rem; color:#fff;}
-.scroll-reveal {margin: 20px 0;}
-.scroll-reveal-text {font-size: clamp(1.6rem, 4vw, 3rem); line-height: 1.5; font-weight: 600;}
-.word {display: inline-block;}
+.parsona_area .slogan {margin-bottom:600px;}
+.parsona_area .slogan .text {font-size:5rem; line-height:6.5rem; color:#fff;}
+.parsona_area .slogan .text span {font-weight:bold;}
 .parsona_area .text_box.flex_box {justify-content:space-between;}
-.parsona_area .text_box dl {width:530px;}
+.parsona_area .text_box dl {width:540px;}
 .company_wrap .text_box dt {font-weight:bold; font-size:2.5rem; line-height:3.75rem; color:#fff; margin-bottom:40px;}
-.company_wrap .text_box dd > p {display:block; line-height:1.625rem; color:rgba(255,255,255,0.7); word-break:keep-all;}
+.company_wrap .text_box dd > p {display:block; font-size:1.25rem; line-height:1.5; color:rgba(255,255,255,0.7); word-break:keep-all;}
+.company_wrap .text_box dd .word {display:inline-block; font-size:1.25rem; color:#fff; transition-duration:1s;}
+.company_wrap .scroll-reveal {margin: 20px 0;}
+.company_wrap .scroll-reveal-text {font-size: clamp(1.25rem, 4vw, 1.5rem); line-height: 1.5; font-weight: 600;}
 .company_wrap .text_box dd + dd {margin-top:30px;}
 .parsona_area .vision_box {margin-top:227px;}
 
@@ -55,9 +56,9 @@
 .value_box {display:flex; flex-flow:row nowrap; justify-content:space-between; gap:80px;}
 .value {width:100%; position:relative;}
 .value_tit {position:absolute; top:0; left:0;}
-.value .tit {font-weight:700; font-size:1.375rem; line-height:1.75rem; color:#26282c; margin-bottom:8px;}
+.value .tit {font-weight:bold; font-size:1.375rem; line-height:1.75rem; color:#26282c; margin-bottom:8px;}
 .value .eng {display:block; font-size:0.875rem; line-height:1.375rem; color:rgba(125, 35, 244, 1);}
-.value .text {font-weight:300; font-size:0.875rem; line-height:1.375rem; color:#888;}
+.value .text {font-weight:300; font-size:1.25rem; line-height:1.5; color:#888;}
 .value .img {width:100%; height:360px;}
 .value.respect .img {background:#fff url('../images/contents/img_value_respect.png') right bottom no-repeat; background-size:auto 280px;}
 .value.creative .img {background:#fff url('../images/contents/img_value_creative.png') right bottom no-repeat; background-size:auto 280px;}
@@ -164,18 +165,18 @@
 /* Wylie Times */
 .times_category {display:flex; flex-flow:row nowrap; margin-bottom:40px; gap:10px;}
 .times_category a {display:inline-block; min-width:48px; font-size:0.875rem; line-height:1.25rem; text-align:center; padding:5px 10px; border-radius:8px; border:1px solid #eceef0; background:#fff; box-shadow:0px 8px 8px rgba(0, 0, 0, 0.04);}
-.times_category a.active {border-color:#111; font-weight:600;}
+.times_category a.active {border-color:#111; font-weight:bold;}
 .times_list > a {display:block; margin-top:15px; box-shadow:0px 8px 8px rgba(0, 0, 0, 0.04);}
 .times_list > a:first-child {margin-top:0;}
 .times_content {padding:20px 40px 20px 20px; border-radius:8px; border:1px solid #eceef0; background:#fff; position:relative;}
 .times_content::after {content:''; display:block; width:16px; height:16px; position:absolute; top:50%; right:20px; background:url('../images/common/icon_right_arrow_16x16.png') no-repeat; transform:translateY(-50%);}
 .times_content dt,
-.times_content dt * {font-weight:600; font-size:1.0rem;}
+.times_content dt * {font-weight:bold; font-size:1.0rem;}
 .times_content dt {white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:8px;}
 .times_content dd {font-size:0.875rem; color:#888;}
 .times_detail {border-radius:12px; border:1px solid #eceef0; overflow:hidden; background:#fff; box-shadow:0px 8px 8px rgba(0, 0, 0, 0.04);}
 .times_detail dt {display:flex; flex-flow:row nowrap; justify-content:space-between; align-items:baseline; padding:30px 40px; border-bottom:1px solid #eceef0;}
-.times_detail .title {width:calc(100% - 80px); font-weight:600; font-size:1.125rem; color:#111; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.times_detail .title {width:calc(100% - 80px); font-weight:bold; font-size:1.125rem; color:#111; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .times_detail .date {font-size:0.875rem; color:#888;}
 .times_detail dd {padding:40px;}
 .times_detail .thumbnail {margin-bottom:40px;}
@@ -223,7 +224,7 @@
 .pager_area .pager {display:inline-block; min-width:68px; font-size:1rem; line-height:2.25rem; color:#fff; vertical-align:top; margin:0 10px;}
 .pager_area .pager a {display:inline-block; color:#888; margin:0 4px;}
 .pager_area .pager a.active {color:#fff;}
-.times_area .pager_area .pager a.active {font-weight:600; color:#111;}
+.times_area .pager_area .pager a.active {font-weight:bold; color:#111;}
 
 .no_list p {font-size:1.5rem; line-height:2rem; color:#fff;}
 
@@ -261,10 +262,10 @@
 /* Skill  */
 .skill_list > li + li {margin-top:50px;}
 .skill_box {padding:30px; border-radius:20px; border:1px solid #26282c; box-sizing:border-box; background:#fff;}
-.skill_box dt {font-weight:700; font-size:2.5rem; padding:0 0 30px; margin-bottom:30px; border-bottom:1px solid #26282c;}
+.skill_box dt {font-weight:bold; font-size:2.5rem; padding:0 0 30px; margin-bottom:30px; border-bottom:1px solid #26282c;}
 .skill_box dt::after {content:''; display:inline-block; width:10px; height:10px; border-radius:50%; margin-left:5px; background-color:#f35626;}
 .skill_detail {display:flex; justify-content:flex-start; align-items:center; gap:10%}
 .skill_detail li {display:flex; flex-direction:column; align-items:center;}
 .skill_detail .skill_icon {display:block; width:120px; height:120px; padding:10px; margin-bottom:15px; border-radius:10px; box-sizing:border-box; background-color:#f0f0f0;}
-.skill_name {font-weight:700; font-size:1.25rem; color:#26282c; text-align:center;}
+.skill_name {font-weight:bold; font-size:1.25rem; color:#26282c; text-align:center;}
 .skill_icon img {width:100%; height:100%; object-fit:contain;}
