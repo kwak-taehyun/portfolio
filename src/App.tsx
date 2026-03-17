@@ -25,8 +25,8 @@ function App() {
             <Route path="career" element={<Career />} />
             <Route path="skill" element={<Skill />} />
             <Route path="etc" element={<Etc />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </Router>

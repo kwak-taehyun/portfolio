@@ -57,6 +57,7 @@ const TextType = ({
   const [lineIndex, setLineIndex] = useState(0);
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
+  const itemRef = useRef<HTMLSpanElement>([]);
 
   const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
 
@@ -71,19 +72,20 @@ const TextType = ({
     return textColors[currentTextIndex % textColors.length];
   };
 
-  // const element = textArray.map((item, index) => {
-  //   return createElement(
-  //     'span',
-  //     {
-  //       key: item,
-  //       className: 'text-type__content',
-  //       style: {
-  //         color: getCurrentTextColor() || 'inherit',
-  //       },
-  //     },
-  //     displayedText
-  //   )
-  // });
+  const elements = textArray.map((item, index) => {
+    return createElement(
+      'span',
+      {
+        key: item,
+        ref: (el) => itemRef.current[index] = el,
+        className: 'text-type__content',
+        style: {
+          color: getCurrentTextColor() || 'inherit',
+        },
+      },
+      null
+    )
+  });
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
@@ -198,12 +200,8 @@ const TextType = ({
 
     if (currentCharIndex === 0 && !isDeleting && displayedText === '') {
       timeout = setTimeout(executeTypingAnimation, initialDelay);
-    } else {
-      if(!multiLine) {
-        executeTypingAnimation();
-      }else{
-        multiExecuteTypingAnimation();
-      }
+    }else{
+      executeTypingAnimation();
     }
 
     return () => clearTimeout(timeout);
@@ -236,21 +234,21 @@ const TextType = ({
       className: `text-type ${className}`,
       ...props
     },
-    // multiLine ?
-    //   element
-    //   :
+    multiLine ?
+      elements
+      :
       <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }} key={displayedText}>
         {displayedText}
       </span>
     ,
-    showCursor && (
-      <span
-        ref={cursorRef}
-        className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? 'text-type__cursor--hidden' : ''}`}
-      >
-        {cursorCharacter}
-      </span>
-    ),
+    // showCursor && (
+    //   <span
+    //     ref={cursorRef}
+    //     className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? 'text-type__cursor--hidden' : ''}`}
+    //   >
+    //     {cursorCharacter}
+    //   </span>
+    // ),
   );
 };
 

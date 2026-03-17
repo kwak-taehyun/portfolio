@@ -1,4 +1,5 @@
 /* layout */
+#root {height:100%;}
 .sub_wrap {position:relative;}
 .sub_wrap.no_bg {background:none;}
 .sub_wrap.no_bg .header {position:fixed; top:0;}
@@ -103,6 +104,10 @@
 .gnb_area .company_info .inquiry {display:inline-block; font-weight:300; font-size:1.125rem; line-height:1.5rem; color:#fff; padding:8px 20px; border-radius:24px; margin-right:0; background:#7D23F4;}
 .company_info .instagram {display:inline-block; width:32px; height:32px; background:url('../images/main/icon_instagram.png') no-repeat; background-size:32px;}
 .company_info .facebook {display:inline-block; width:32px; height:32px; background:url('../images/main/icon_facebook.png') no-repeat; background-size:32px;}
+
+/* Not Found */
+.not_found {display:flex; justify-content:center; align-items:center; width:100%; height:calc(100vh - 232px);}
+.not_found p {font-size:2.0rem; text-align:center; color:#fff;}
 
 /* footer */
 .footer {background:#000;}
