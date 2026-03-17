@@ -38,10 +38,10 @@
 .parsona_area {position:relative; padding:170px 0 200px; background:url('../images/contents/bg_company.png') no-repeat; background-size:100%; background-attachment:fixed;}
 .parsona_area > div {width:1216px; margin:0 auto;}
 .parsona_area .slogan {margin-bottom:600px;}
-.parsona_area .slogan .text {font-size:5rem; line-height:6.5rem; color:#fff;}
+.parsona_area .slogan .text {width:920px; font-size:5rem; line-height:6.5rem; color:#fff;}
 .parsona_area .slogan .text span {font-weight:bold;}
 .parsona_area .text_box.flex_box {justify-content:space-between;}
-.parsona_area .text_box dl {width:540px;}
+/*.parsona_area .text_box dl {width:540px;}*/
 .company_wrap .text_box dt {font-weight:bold; font-size:2.5rem; line-height:3.75rem; color:#fff; margin-bottom:40px;}
 .company_wrap .text_box dd > p {display:block; font-size:1.25rem; line-height:1.5; color:rgba(255,255,255,0.7); word-break:keep-all;}
 .company_wrap .text_box dd .word {display:inline-block; font-size:1.25rem; color:#fff; transition-duration:1s;}
@@ -49,6 +49,20 @@
 .company_wrap .scroll-reveal-text {font-size: clamp(1.25rem, 4vw, 1.5rem); line-height: 1.5; font-weight: 600;}
 .company_wrap .text_box dd + dd {margin-top:30px;}
 .parsona_area .vision_box {margin-top:227px;}
+.mouse_icon {display:flex; flex-direction:column; justify-content:center; align-items:center; color:#fff; position:absolute; top:35%; left:50%; transform:translateX(-50%); animation:scrollBounce 2s ease-out infinite;}
+.mouse_icon svg {width:50px; height:60px;}
+
+@keyframes scrollBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -10px);
+  }
+  60% {
+    transform: translate(-50%, -5px);
+  }
+}
 
 .value_area,
 .skill_area {padding:200px 0; background:#fff;}

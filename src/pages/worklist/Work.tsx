@@ -10,9 +10,8 @@ export type WorkListType = {
 
 const Work = () => {
   const workList: Array<WorkListType> = [
-    {id: 1, company: "KB Pay 3.0", project: "모바일 구축(2025.09 ~ 2025.02)", thumbnail: "images/portpolio/thumb_bg_kb.png"},
+    {id: 1, company: "KB Pay 3.0", project: "모바일 구축(2025.09 ~ 2026.02)", thumbnail: "images/portpolio/thumb_bg_kb.png"},
     {id: 2, company: "SK렌터카 & 기업홈페이지", project: "PC,모바일 리뉴얼 및 운영(2023.04 ~ 2025.08)", thumbnail: "images/portpolio/thumb_bg_skr.png"},
-    {id: 3, company: "신라면세점 지점 & 리워즈 사이트", project: "PC,모바일 운영(2021.01 ~ 2022.10)", thumbnail: "images/portpolio/thumb_bg_dgb.jpg"},
   ]
 
   const workListItem = workList.map((item, index) => {

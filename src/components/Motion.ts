@@ -32,7 +32,7 @@ const bounceDown: Variants = {
 
 const upToShow: Variants = {
   offscreen: {
-    y: 100,
+    y: 200,
     opacity: 0,
   },
   onscreen: {

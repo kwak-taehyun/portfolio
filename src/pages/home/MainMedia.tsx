@@ -30,7 +30,7 @@ const MainMedia = (props: PropsType) => {
               cursorBlinkDuration={0.5}
               className="text"
               loop={false}
-              //onAnimationComplete={handleAnimationComplete}
+              onAnimationComplete={handleAnimationComplete}
             />
             {/*<BlurText
               text="Welcome to taehyun's portfolio!"
