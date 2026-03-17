@@ -54,8 +54,7 @@ const TextType = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(!startOnVisible);
-  const [elements, setElements] = useState(insertElement);
-  const [lineIndex, setLineIndex] = useState(1);
+  const [lineIndex, setLineIndex] = useState(0);
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -72,16 +71,19 @@ const TextType = ({
     return textColors[currentTextIndex % textColors.length];
   };
 
-  const insertElement = createElement(
-    'span',
-    {
-      className: 'text-type__content',
-      style: {
-        color: getCurrentTextColor() || 'inherit'
-      },
-    },
-    displayedText
-  );
+  // const element = textArray.map((item, index) => {
+  //   return createElement(
+  //     'span',
+  //     {
+  //       key: item,
+  //       className: 'text-type__content',
+  //       style: {
+  //         color: getCurrentTextColor() || 'inherit',
+  //       },
+  //     },
+  //     displayedText
+  //   )
+  // });
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
@@ -168,7 +170,7 @@ const TextType = ({
     };
 
     const multiExecuteTypingAnimation = () => {
-      if(lineIndex <= textArray.length) {
+      if(lineIndex < textArray.length) {
         if (currentCharIndex < processedText.length) {
           timeout = setTimeout(
             () => {
@@ -176,10 +178,9 @@ const TextType = ({
               setCurrentCharIndex(prev => prev + 1);
             },
             variableSpeed ? getRandomSpeed() : typingSpeed
-          );          
+          );
         }else{
           timeout = setTimeout(() => {
-
             setLineIndex(prev => prev + 1);
             setCurrentCharIndex(0);
             setCurrentTextIndex(prev => (prev + 1) % textArray.length);
@@ -235,10 +236,13 @@ const TextType = ({
       className: `text-type ${className}`,
       ...props
     },
-    // <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }}>
-    //   {displayedText}
-    // </span>,
-    elements,
+    // multiLine ?
+    //   element
+    //   :
+      <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }} key={displayedText}>
+        {displayedText}
+      </span>
+    ,
     showCursor && (
       <span
         ref={cursorRef}
