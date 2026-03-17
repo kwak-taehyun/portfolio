@@ -10,7 +10,8 @@ const Layout = () => {
 
   return (
     <div className={`${pathname === "intro" ? "sub_wrap no_bg" : "sub_wrap"}`}>
-      {pathname === "intro" ? "" 
+      {pathname === "intro" ?
+        ""
         :
         <div className="sub_visual" style={{width: '100%', height: '1200px', position: 'absolute',}}>
           <DarkVeil

@@ -43,7 +43,7 @@ const IntroContent = () => {
         }
         <div className="slogan">
           <TextType 
-            text={["Beyond Publisher", "Next Frontend developer"]}
+            text={["Beyond Publisher Next Frontend developer"]}
             className="text"
             typingSpeed={75}
             pauseDuration={1500}
