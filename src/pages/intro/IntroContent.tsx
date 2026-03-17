@@ -75,7 +75,7 @@ const IntroContent = () => {
         </motion.div>
         <motion.div className="text_box flex_box vision_box" initial="offscreen" whileInView="onscreen" viewport={{once: true, amount: 0.8}}>
           <motion.div className="vision_img" variants={effects.hideToShow}>
-            <img src="/images/contents/img_vision.png" alt="wylie vision" />
+            <img src="images/contents/img_vision.png" alt="vision" />
           </motion.div>
           <motion.dl variants={effects.leftToShow}>
             <dt>My Vision</dt>

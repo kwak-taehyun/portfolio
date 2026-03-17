@@ -34,9 +34,7 @@
       // );
 
       // 세션 스토리지에 현재 경로를 저장하고 메인 페이지로 이동
-      sessionStorage.setItem('redirect', location.pathname);
-      location.replace('/');
-
+      window.location.href = "/portfolio/" + window.location.pathname.ubstring(1);
     </script>
   </head>
   <body>
