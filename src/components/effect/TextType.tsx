@@ -197,7 +197,7 @@ const TextType = ({
     }
 
     if (currentCharIndex === 0 && !isDeleting && displayedText === '') {
-      timeout = setTimeout(executeTypingAnimation, multiExecuteTypingAnimation, initialDelay);
+      timeout = setTimeout(executeTypingAnimation, initialDelay);
     } else {
       if(!multiLine) {
         executeTypingAnimation();
