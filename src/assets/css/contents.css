@@ -43,7 +43,6 @@
 .parsona_area .slogan .text-type__content {display:inline-block;}
 .parsona_area .slogan .text-type__content.block {display:block;}
 .parsona_area .text_box.flex_box {justify-content:space-between;}
-/*.parsona_area .text_box dl {width:540px;}*/
 .company_wrap .text_box dt {font-weight:bold; font-size:2.5rem; line-height:3.75rem; color:#fff; margin-bottom:40px;}
 .company_wrap .text_box dd > p {display:block; font-size:1.25rem; line-height:1.5; color:rgba(255,255,255,0.7); word-break:keep-all;}
 .company_wrap .text_box dd .word {display:inline-block; font-size:1.25rem; color:#fff; transition-duration:1s;}
@@ -124,11 +123,6 @@
 .awards_area .list_table li > span {display:table-cell; padding:32px 0; font-size:1.125rem; line-height:2rem; color:#fff;  border-top:1px solid rgba(255,255,255,0.1); vertical-align:middle;}
 .awards_area .list_table li .awards {width: 18%; text-align:center;}
 .awards_area .awards span {display:block; position:relative;}
-/*.awards span::before {content:''; display:inline-block; width:40px; height:40px; position:absolute; top:50%; transform:translateY(-50%); left:10px;}
-.awards.ictaward span::before {background:url('../images/contents/ico_ict_award.png') no-repeat; background-size:40px;}
-.awards.sociali-award span::before {background:url('../images/contents/ico_social_award.png') no-repeat; background-size:40px;}
-.awards.appaward span::before {background:url('../images/contents/ico_app_award.png') no-repeat; background-size:40px;}
-.awards.webaward span::before {background:url('../images/contents/ico_web_award.png') no-repeat; background-size:40px;}*/
 .awards_area .list_table li .detail {width: 16%; padding:0 10px; text-align:center;}
 .awards_area .list_table li .sector {width: 18%; font-size:0.875rem; color:#888; padding:0 10px; text-align:center;}
 .awards_area .list_table li .project {width: auto; text-align:center; word-break:keep-all;}
@@ -258,9 +252,6 @@
 .easy_payment .payment_cont.regist .card {width:100%; height:64px;}
 .easy_payment .payment_cont.list {padding-bottom:0;}
 .payment_cont .card {display:flex; flex-direction:column; justify-content:center; border-radius:12px; border:1px solid #D4D7DC;}
-/* .mo_wrap .payment_cont .payment_list li {margin:0 5px 30px;}
-.mo_wrap .easy_payment .payment_list li:first-child {margin-left:0;}
-.mo_wrap .easy_payment .payment_list li:last-child {margin-right:0;} */
 .payment_list .card {width:120px;}
 .easy_payment .card {height:64px; font-size:12px; line-height:18px; padding:0 12px; background:#fff;}
 .easy_payment .slick-current .card {color:#fff; background:#50555C; border-color:#50555C;}
