@@ -57,7 +57,7 @@ const TextType = ({
   const [lineIndex, setLineIndex] = useState(0);
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
-  const itemRef = useRef<HTMLSpanElement>([]);
+  const itemRef = useRef<HTMLSpanElement[]>([]);
 
   const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
 
@@ -73,7 +73,9 @@ const TextType = ({
   };
 
   const textTypingAnimation = (index: number) => {
-    itemRef.current[index].innerText = displayedText;
+    if(itemRef.current !== null) {
+      itemRef.current[index].innerText = displayedText;
+    }
   }
 
   useEffect(() => {
@@ -129,7 +131,7 @@ const TextType = ({
 
           setCurrentTextIndex(prev => (prev + 1) % textArray.length);
           setCurrentCharIndex(0);
-          itemRef.current[lineIndex - 1].classList.add('block');
+          itemRef.current[lineIndex - 1]?.classList.add('block');
           timeout = setTimeout(() => {}, pauseDuration);
         } else {
           if(!multiLine){
@@ -210,7 +212,7 @@ const TextType = ({
           'span',
           {
             key: item,
-            ref: (el) => itemRef.current[index] = el,
+            ref: (el: HTMLSpanElement) => itemRef.current[index] = el,
             className: 'text-type__content',
             style: {
               color: getCurrentTextColor() || 'inherit',
