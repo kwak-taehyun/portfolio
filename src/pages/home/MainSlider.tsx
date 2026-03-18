@@ -25,7 +25,7 @@ const MainSlider = (props: PropsType, ref: any) => {
       <div className="slide_area">
         <div className="slide_text">
           <div className="text_area">
-            <p className="group">
+            <div className="group">
               <BlurText
                 key={value?.state.slideList[textIndex].title}
                 text={value?.state.slideList[textIndex].title}
@@ -34,8 +34,8 @@ const MainSlider = (props: PropsType, ref: any) => {
                 direction="top"
                 className="group"
               />
-            </p>
-            <p className="text">
+            </div>
+            <div className="text">
               <BlurText
                 key={value?.state.slideList[textIndex].desc}
                 text={value?.state.slideList[textIndex].desc}
@@ -44,7 +44,7 @@ const MainSlider = (props: PropsType, ref: any) => {
                 direction="top"
                 className="text"
               />
-            </p>
+            </div>
           </div>
         </div>
         <Slick className="slide_img" changeSlide={props.changeSlide} ref={ref}>
