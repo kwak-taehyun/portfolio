@@ -54,10 +54,10 @@ const TextType = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(!startOnVisible);
-  //const [lineIndex, setLineIndex] = useState(0);
+  const [lineIndex, setLineIndex] = useState(0);
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
-  //const itemRef = useRef<HTMLSpanElement>([]);
+  const itemRef = useRef<HTMLSpanElement>([]);
 
   const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
 
@@ -72,20 +72,9 @@ const TextType = ({
     return textColors[currentTextIndex % textColors.length];
   };
 
-  // const elements = textArray.map((item, index) => {
-  //   return createElement(
-  //     'span',
-  //     {
-  //       key: item,
-  //       ref: (el) => itemRef.current[index] = el,
-  //       className: 'text-type__content',
-  //       style: {
-  //         color: getCurrentTextColor() || 'inherit',
-  //       },
-  //     },
-  //     null
-  //   )
-  // });
+  const textTypingAnimation = (index: number) => {
+    itemRef.current[index].innerText = displayedText;
+  }
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
@@ -140,11 +129,17 @@ const TextType = ({
 
           setCurrentTextIndex(prev => (prev + 1) % textArray.length);
           setCurrentCharIndex(0);
+          itemRef.current[lineIndex - 1].classList.add('block');
           timeout = setTimeout(() => {}, pauseDuration);
         } else {
-          timeout = setTimeout(() => {
-            setDisplayedText(prev => prev.slice(0, -1));
-          }, deletingSpeed);
+          if(!multiLine){
+            timeout = setTimeout(() => {
+              setDisplayedText(prev => prev.slice(0, -1));
+            }, deletingSpeed);
+          }else{
+            setDisplayedText('');
+            setLineIndex(prev => prev + 1);
+          }
         }
       } else {
         if (currentCharIndex < processedText.length) {
@@ -171,38 +166,13 @@ const TextType = ({
       }
     };
 
-    // const multiExecuteTypingAnimation = () => {
-    //   if(lineIndex < textArray.length) {
-    //     if (currentCharIndex < processedText.length) {
-    //       timeout = setTimeout(
-    //         () => {
-    //           setDisplayedText(prev => prev + processedText[currentCharIndex]);
-    //           setCurrentCharIndex(prev => prev + 1);
-    //         },
-    //         variableSpeed ? getRandomSpeed() : typingSpeed
-    //       );
-    //     }else{
-    //       timeout = setTimeout(() => {
-    //         setLineIndex(prev => prev + 1);
-    //         setCurrentCharIndex(0);
-    //         setCurrentTextIndex(prev => (prev + 1) % textArray.length);
-    //       }, pauseDuration);
-
-    //       if (onAnimationComplete) {
-    //         return onAnimationComplete();
-    //       }
-    //     }
-    //   }else{
-    //     setCurrentCharIndex(0);
-    //     setIsDeleting(false);
-    //   }
-    // }
-
     if (currentCharIndex === 0 && !isDeleting && displayedText === '') {
       timeout = setTimeout(executeTypingAnimation, initialDelay);
     }else{
       executeTypingAnimation();
     }
+
+    textTypingAnimation(lineIndex);
 
     return () => clearTimeout(timeout);
   }, [
@@ -221,6 +191,7 @@ const TextType = ({
     variableSpeed,
     onSentenceComplete,
     onAnimationComplete,
+    lineIndex,
   ]);
 
   const shouldHideCursor =
@@ -233,9 +204,22 @@ const TextType = ({
       className: `text-type ${className}`,
       ...props
     },
-    // multiLine ?
-    //   elements
-    //   :
+    multiLine ?
+      textArray.map((item, index) => {
+        return createElement(
+          'span',
+          {
+            key: item,
+            ref: (el) => itemRef.current[index] = el,
+            className: 'text-type__content',
+            style: {
+              color: getCurrentTextColor() || 'inherit',
+            },
+          },
+          null
+        )
+      })
+      :
       <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }} key={displayedText}>
         {displayedText}
       </span>

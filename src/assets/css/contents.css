@@ -38,8 +38,10 @@
 .parsona_area {position:relative; padding:170px 0 200px; background:url('../images/contents/bg_company.png') no-repeat; background-size:100%; background-attachment:fixed;}
 .parsona_area > div {width:1216px; margin:0 auto;}
 .parsona_area .slogan {margin-bottom:600px;}
-.parsona_area .slogan .text {width:920px; font-size:5rem; line-height:6.5rem; color:#fff;}
-.parsona_area .slogan .text span {font-weight:bold;}
+.parsona_area .slogan .text {font-size:5rem; line-height:6.5rem; color:#fff; white-space:pre-wrap;}
+.parsona_area .slogan .text span {font-weight:bold; white-space:pre-line;}
+.parsona_area .slogan .text-type__content {display:inline-block;}
+.parsona_area .slogan .text-type__content.block {display:block;}
 .parsona_area .text_box.flex_box {justify-content:space-between;}
 /*.parsona_area .text_box dl {width:540px;}*/
 .company_wrap .text_box dt {font-weight:bold; font-size:2.5rem; line-height:3.75rem; color:#fff; margin-bottom:40px;}
