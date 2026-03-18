@@ -73,7 +73,7 @@ const TextType = ({
   };
 
   const textTypingAnimation = (index: number) => {
-    if(itemRef.current !== null) {
+    if(itemRef.current !== null && multiLine) {
       itemRef.current[index].innerText = displayedText;
     }
   }
