@@ -124,4 +124,22 @@
 	.awards_area .list_table li .link {width:20%; text-align:center; position:absolute; top:0; right:0;}
 	.mobile .awards_area .list_table li .link a {display:block; font-size:0.750rem; line-height:20px; color:#fff;}
 
+	/* contents - etc */
+	.search_area {justify-content:space-between;}
+	.search_box label,
+	.search_box button {font-size:0.750rem;}
+	.search_box label {padding:0 10px 0 0;}
+	.search_box .btn.type01 {padding:5px 10px;}
+	.search_box input {width:160px;}
+	.search_area .select_box {margin-left:0;}
+	.select_box label {font-size:0; color:transparent; padding:0; opacity:0;}
+	.select_box select {min-width:64px; font-size:0.750rem; padding:5px 22px 5px 5px; background-size:16px 16px;}
+	.service_area .service_list {gap:40px;}
+	.service_list li {width:calc((100% - 40px) / 2);}
+	.service_list .info {flex-wrap:wrap; width:100%;}
+	.service_list .tit {white-space:wrap; word-break:keep-all;}
+	.service_list .img {width:100%; height:auto; margin-right:0;}
+	.service_list .img img {max-width:unset; max-height:unset; width:100%; object-fit:contain;}
+	.service_list .items {flex-direction:column;}
+	.price_box .price {display:block;}
 }
