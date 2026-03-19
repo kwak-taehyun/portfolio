@@ -25,6 +25,8 @@
 	.gnb_area .company_info .inquiry {font-size:1rem; line-height:24px; padding:4px 20px;}
 
 	/* layout */
+	.sub_wrap.mobile {height:100%;}
+	.sub_wrap.mobile .container {min-height:calc(100% - 160px);}
 	.sub_wrap.mobile .container .inner {width:100%;}
 	.sub_contents {padding:20px;}
 	.sub_contents .sub_title {font-size:2rem; margin-bottom:40px;}
@@ -61,12 +63,65 @@
 	.slide_text .text {font-size:3.0rem; line-height:1;}
 	.main_footer {padding:0 20px;}
 
-	/* contents */
-	/*.portpolio-list-cont.cx ul li .list-box {flex-direction:column;}*/
-	/*.portpolio-list-cont.cx ul li .list-box .list-title {position:unset;}*/
+	/* contents - work */
 	.portpolio-list-cont.cx ul li .list-box .list-title .brand-name,
 	.portpolio-list-cont.cx ul li .list-box .list-title .project-name {font-size:1rem; text-align:left;}
 	.portpolio-list-cont.cx ul li .list-box .list-img-wrap {max-width: 100%;}
 	.portpolio-list-cont.cx ul li:nth-child(odd) .list-box .list-img-wrap {margin-left:0px;}
 	.portpolio-list-cont.cx ul li:nth-child(even) .list-box .list-img-wrap {margin-right:0px;}
+
+	/* contents - intro */
+	.parsona_area {padding:80px 20px; background-size:cover;}
+	.parsona_area .slogan {margin-bottom:100%;}
+	.parsona_area .slogan .text {font-size:1.5rem; line-height:1.2;}
+	.mouse_icon {top:20%;}
+	.mouse_icon svg {width:40px; height:50px;}
+	.mouse_icon span {font-size:0.875rem;}
+	.company_wrap .text_box dt {font-size:1.125rem; line-height:1.2; margin-bottom:20px;}
+	.company_wrap .scroll-reveal-text {font-size:1rem; line-height:1.2;}
+	.company_wrap .text_box dd .word {font-size:0.875rem; line-height:1.5;}
+	.parsona_area .text_box.flex_box {flex-direction:column;}
+	.parsona_area .vision_box {margin-top:50%;}
+	.vision_img {width:100%; margin-bottom:20px;}
+	.vision_img img {width:100%;}
+	.company_wrap .text_box dd > p {font-size:0.875rem; line-height:1.5;}
+	.value_area {padding:80px 20px;}
+	.value_box {flex-direction:column; gap:40px;}
+	.value_tit {position:unset;}
+	.value .tit {font-size:1rem; line-height:1.5;}
+	.value .text {font-size:0.875rem;}
+	.value .img {position:absolute; top:0; right:0; width:96px; height:96px;}
+	.value.respect .img {background-size:auto 100%;}
+	.value.creative .img {background-size:auto 100%;}
+	.value.challenge .img {background-size:auto 100%;}
+
+	/* contents - skill */
+	.skill_box {padding:20px;}
+	.skill_box dt {font-size:1.25rem; padding:0 0 20px; margin-bottom:20px;}
+	.skill_detail {flex-wrap:wrap; justify-content:flex-start; gap:20px 0;}
+	.skill_detail li {justify-content:center; width:50%;}
+	.skill_detail .skill_icon {width:80px; height:80px;}
+	.skill_name {font-size:0.875rem;}
+
+	/* contents - career */
+	.awards_area {padding:20px;}
+	.area_tit {font-size:1.375rem; line-height:1.2;}
+	.mobile .area_tit br {display:inline-block;}
+	.awards_area .inner_tit {font-size:1.25rem; line-height:1.5; margin:40px 0 20px;}
+	.history_info dt {padding-right:40px;}
+	.history_info dt .years {font-size:1.25rem; line-height:1.5;}
+	.history_info dt .number {font-size:1rem; line-height:28px;}
+	.history_info dt::after {width:30px; height:30px; margin-top:-15px; background-position:center; background-size:auto 40px;}
+	.awards_list > li {margin-top:40px;}
+	.awards_list li.active .history_info dd {padding:10px 0;}
+	.awards_area .list_table li {display:flex; flex-wrap:wrap; align-items:center; position:relative;}
+	.awards_area .list_table li + li {border-top:1px solid rgba(255,255,255,0.1);}
+	.awards_area .list_table li > span {padding:8px 0; font-size:0.875rem; line-height:1.5; border-top:none;}
+	.awards_area .list_table li .awards {width:100%; text-align:left;}	
+	.awards_area .list_table li .detail {width: auto; padding:0 10px 0 0; text-align:left;}
+	.awards_area .list_table li .sector {width: auto; font-size:0.750rem; padding:0; text-align:left;}
+	.awards_area .list_table li .project {width: 100%; text-align:left; word-break:keep-all;}
+	.awards_area .list_table li .link {width:20%; text-align:center; position:absolute; top:0; right:0;}
+	.mobile .awards_area .list_table li .link a {display:block; font-size:0.750rem; line-height:20px; color:#fff;}
+
 }

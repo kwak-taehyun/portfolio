@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 import {effects} from '../../components/Motion';
 import {WorkListType} from './Work';
+import {isMobile} from 'react-device-detect';
 
 type PropsType = {
   items: WorkListType;
@@ -17,12 +18,18 @@ const WorkListDetails = (props: PropsType) => {
             <span className="brand-bg"><img src={`${props.items.thumbnail}`} alt={`${props.items.company} ${props.items.project}`} /></span>
           </motion.div>
           {props.index % 2 === 1 ?
-            <motion.div className="list-title" variants={effects.leftToShow}>
+            <motion.div 
+              className="list-title" 
+              variants={isMobile ? effects.hideToShow : effects.leftToShow}
+            >
               <strong className="brand-name">{props.items.company}</strong>
               <p className="project-name">{props.items.project}</p>
             </motion.div>
             :
-            <motion.div className="list-title" variants={effects.rightToShow}>
+            <motion.div 
+              className="list-title" 
+              variants={isMobile ? effects.hideToShow : effects.rightToShow}
+            >
               <strong className="brand-name">{props.items.company}</strong>
               <p className="project-name">{props.items.project}</p>
             </motion.div>

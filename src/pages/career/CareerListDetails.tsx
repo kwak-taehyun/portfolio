@@ -1,4 +1,5 @@
 import {CareerListType} from './Career';
+import {isMobile} from 'react-device-detect';
 
 type PropsType = {
   item: CareerListType;
@@ -11,7 +12,11 @@ const CareerListDetails = (props: PropsType) => {
   return (
     <>
       <li>
-        <span className={`awards ${strToLower}`}><span>{`${props.item.period}`}</span></span>
+        <span className="awards">
+        {isMobile ? 
+          `${strToLower}` : `${props.item.period}`
+        }
+        </span>
         <span className="detail">{`${props.item.details}`}</span>
         <span className="sector">{`${props.item.sector}`}</span>
         <span className="project">{`${props.item.project}`}</span>
