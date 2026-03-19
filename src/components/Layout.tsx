@@ -5,11 +5,6 @@ import Header from './Header';
 import Footer from './Footer';
 import DarkVeil from './effect/DarkVeil';
 
-type DeivceSizeType = {
-  width: number;
-  height: number;
-}
-
 const Layout = () => {
   const location = useLocation();
   const pathname: string = location.pathname.substr(1);

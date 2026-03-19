@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import CareerList from './CareerList';
 
 export type CareerType = {
@@ -71,10 +71,6 @@ const Career = () => {
   const handler = (index:number) => {
     setClickIndex(index);
   };
-
-  // useEffect(() => {
-  //   console.log('reloading');
-  // }, [clickIndex]);
 
   return (
     <div  className="awards_area">
