@@ -142,4 +142,7 @@
 	.service_list .img img {max-width:unset; max-height:unset; width:100%; object-fit:contain;}
 	.service_list .items {flex-direction:column;}
 	.price_box .price {display:block;}
+	.pager_area .pager {font-size:0.875rem; line-height:24px;}
+	.pager_area .btn {width:24px; height:24px;}
+	.pager_area .btn::after {width:16px; height:16px; background-size:16px auto;}
 }
