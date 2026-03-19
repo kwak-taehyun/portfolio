@@ -23,7 +23,7 @@ const MainSlider = (props: PropsType, ref: any) => {
     <div className="main_slider">
       <MainAside />
       <div className="slide_area">
-        <div className="slide_text">
+        <div className={`slide_text ${value?.state.isMobile ? "bg" : ""}`}>
           <div className="text_area">
             <div className="group">
               <BlurText

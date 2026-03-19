@@ -17,7 +17,7 @@ const GnbMenu = () => {
     <div className="gnb_nav">
       <div className="nav_inner">
         <div className="gnb_link">
-          <h4>I can do Anything</h4>
+          <h4>Kwak tae hyun Portfolio</h4>
           <ul className="nav_list">
             {navList.map((item, index) => {
               return <li key={index}><NavLink to={`/${item.name}`}>{item.name}</NavLink></li>
@@ -27,7 +27,7 @@ const GnbMenu = () => {
 
         <div className="company_info">
           <div className="wylie_story">
-            <h4>Kwak tae hyun Portfolio</h4>
+            <h4>I can do Anything</h4>
             <ul className="wylie_link">
               <li><Link to="etc">Etc</Link></li>
               {/*<li><Link to="people">People</Link></li>*/}

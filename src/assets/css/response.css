@@ -1,0 +1,72 @@
+@media screen and (max-width:768px) {
+	/* header  */
+	.mobile .header {background-color:rgba(0, 0, 0, 0.5);}
+	.header {height:auto; padding:15px 0; position:fixed; top:0; z-index:500;}
+	.header .inner {padding:0 20px;}
+	.header .home .logo {width:100%; height:100%;}	
+	.header .logo .text {font-size:0.875rem;}
+	.header .logo .text strong {font-size:1.0rem;}
+	.header .inquiry {display:none;}
+	.header .btn_gnb {width:30px; height:30px;}
+	.header .gnb_box::before {top:52%;}
+	.header .btn_gnb::before {width:24px; height:6px; top:6px;}
+	.header .gnb_box::after {bottom:6px;}
+	.mobile .header_cont .header_nav {display:none;}
+
+	/* nav */
+	.nav_inner {flex-direction:column; justify-content:center; align-items:flex-start; padding:40px;}
+	.gnb_link {margin-bottom:40px;}
+	.gnb_link h4 {position:unset; transform:unset; margin-bottom:10px;}
+	.nav_list li a {font-size:2.5rem;}
+	.company_info h4 {margin-bottom:10px;}
+	.company_info hr {margin:20px 0;}
+	.wylie_info {margin-bottom:40px;}
+	.wylie_info dd a {font-size:0.875rem;}
+	.gnb_area .company_info .inquiry {font-size:1rem; line-height:24px; padding:4px 20px;}
+
+	/* layout */
+	.sub_wrap.mobile .container .inner {width:100%;}
+	.sub_contents {padding:20px;}
+	.sub_contents .sub_title {font-size:2rem; margin-bottom:40px;}
+	.footer .inner {width:100%; padding:20px;}
+	.address {flex-direction:column;}
+
+	/* main */
+	.header .inner.home {justify-content:space-between;}
+	.header .home .wylie_logo {position:static;}
+	.header .home .wylie_logo .text {font-weight:300; font-size:0.875rem;}
+	.header .home .wylie_logo .text strong {font-size:1.0rem; display:inline;}
+	.main .main_contents {height:calc(100% - 48px);}
+	.main_slider {height:100%; padding:0;}
+	.aside_nav {display:none;}
+	.my_ci {height:100%;}
+	.my_ci .visual_area {height:100%;}
+	.my_ci .visual_text {align-items:flex-start; justify-content:flex-start; padding:60px 20px;}
+	.visual_text .text {width:220px; margin-top:20px;}
+	.main .scroll_arrow {top:50%; margin-top:0;}
+	.main .scroll_arrow.on {display:flex; align-items:center; left:20px;}
+	.main .scroll_arrow .text {font-size:0.875rem;}
+	.main .scroll_arrow.on .text::after {display:none;}
+	.main .scroll_arrow.on::after {position:unset; display:inline-block;}
+	.visual_text .text {font-size:2.25rem; margin-bottom:0;}
+	.slide_control {bottom:20px; z-index:15;}
+	.main_slider .slide_area {width:100%; height:100%;}
+	.slide_img {height:100%;}
+	.slick-slider {height:100%;}
+	.slick-slider * {height:100%;}
+	.main_slider img {height:100%;}
+	.main_slider .slide_text {width:100%; padding:20px; top:100px; left:0; transform:unset;}
+	.slide_text.bg {background-color:rgba(0, 0, 0, 0.2);}
+	.slide_text .group span {font-size:2rem; line-height:1;}
+	.slide_text .text {font-size:3.0rem; line-height:1;}
+	.main_footer {padding:0 20px;}
+
+	/* contents */
+	/*.portpolio-list-cont.cx ul li .list-box {flex-direction:column;}*/
+	/*.portpolio-list-cont.cx ul li .list-box .list-title {position:unset;}*/
+	.portpolio-list-cont.cx ul li .list-box .list-title .brand-name,
+	.portpolio-list-cont.cx ul li .list-box .list-title .project-name {font-size:1rem; text-align:left;}
+	.portpolio-list-cont.cx ul li .list-box .list-img-wrap {max-width: 100%;}
+	.portpolio-list-cont.cx ul li:nth-child(odd) .list-box .list-img-wrap {margin-left:0px;}
+	.portpolio-list-cont.cx ul li:nth-child(even) .list-box .list-img-wrap {margin-right:0px;}
+}

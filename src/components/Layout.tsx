@@ -1,5 +1,6 @@
 import {Outlet} from 'react-router';
 import {useLocation} from 'react-router-dom';
+import {isMobile} from 'react-device-detect';
 import Header from './Header';
 import Footer from './Footer';
 import DarkVeil from './effect/DarkVeil';
@@ -9,11 +10,25 @@ const Layout = () => {
   const pathname: string = location.pathname.substr(1);
 
   return (
-    <div className={`${pathname === "intro" ? "sub_wrap no_bg" : "sub_wrap"}`}>
+    <div className={
+      `${isMobile && pathname === "intro" ? 
+        "sub_wrap no_bg mobile" 
+      : !isMobile && pathname === "intro" ? 
+        "sub_wrap no_bg" 
+      : isMobile && pathname !== "intro" ? 
+        "sub_wrap mobile" : "sub_wrap"}`
+    }>
       {pathname === "intro" ?
         ""
         :
-        <div className="sub_visual" style={{width: '100%', height: '1200px', position: 'absolute',}}>
+        <div 
+          className="sub_visual"
+          style={{
+            width: '100%', 
+            height: isMobile ? '100%' : '1200px', 
+            position: 'absolute',
+          }}
+        >
           <DarkVeil
             key={pathname}
             hueShift={0}

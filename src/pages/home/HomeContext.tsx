@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {isMobile} from 'react-device-detect';
 
 export type SlideListType = {
   id: number;
@@ -8,7 +9,7 @@ export type SlideListType = {
 };
 
 export type HomeContextValueType = {
-  state: {slideList: Array<SlideListType>, isHomeValid: boolean, isOpenGnb: boolean, isPaused: boolean};
+  state: {slideList: Array<SlideListType>, isHomeValid: boolean, isOpenGnb: boolean, isPaused: boolean, isMobile: boolean};
   change: {
     onChangeMode: (mode: boolean) => void;
     gnbClick: () => void;
@@ -34,6 +35,7 @@ export const HomeProvider = (props: PropsType) => {
 
   const onChangeMode = (mode: boolean) => {
     setIsHomeValid(mode);
+    setIsPaused(mode);
   };
 
   const gnbClick = () => {
@@ -45,7 +47,7 @@ export const HomeProvider = (props: PropsType) => {
   };
 
   const values: HomeContextValueType = {
-    state: {slideList, isHomeValid, isOpenGnb, isPaused},
+    state: {slideList, isHomeValid, isOpenGnb, isPaused, isMobile},
     change: {onChangeMode, gnbClick, onChangePause},
   }
 
