@@ -9,10 +9,9 @@ type PropsType = {
 
 const MainMedia = (props: PropsType) => {
   const handleAnimationComplete = () => {
-    // setTimeout(() => {
-    //   props.modeOnChange();
-    // }, 4000);
-    console.log('media query');
+    setTimeout(() => {
+      props.modeOnChange();
+    }, 4000);
   };
 
   return (
